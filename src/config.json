@@ -1,0 +1,14 @@
+{
+    "clientID": "",
+    "serverOrigin": "",
+    "signInRedirectURL": "https://localhost:5000",
+    "signOutRedirectURL": "https://localhost:5000",
+    "scope": ["openid","profile","email"],
+    "choreo_configs":{
+        "token_endpoint": "",
+        "consumer_key": "",
+        "consumer_secret": "",
+        "api_endpoint": ""
+        
+    }
+}

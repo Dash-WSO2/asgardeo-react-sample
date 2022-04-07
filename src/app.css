@@ -1,0 +1,455 @@
+/**
+ * Copyright (c) 2021, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.
+ *
+ * WSO2 Inc. licenses this file to you under the Apache License,
+ * Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied. See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #2A2A2A;
+    background-color: #fff;
+    font-family: BlinkMacSystemFont, Segoe WPC, Segoe UI, HelveticaNeue-Light, Ubuntu, Droid Sans, sans-serif, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+body, #root, #root > .container-fluid {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 300;
+}
+
+h1 b, h2 b, h3 b, h4 b, h5 b {
+    font-weight: 400;
+}
+
+b {
+    font-weight: 500;
+}
+
+a {
+    color: #bc261a;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+hr.page-title-underline {
+    width: 40px;
+    margin: 0 auto;
+    height: 3px;
+    background-color: #bc261a;
+    margin-bottom: 30px;
+}
+
+.home-page-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 0 !important;
+    background-position: center;
+    background-size: cover;
+}
+
+.home-description {
+    background-color: hsla(4, 76%, 42%, 0.70);
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 50px;
+}
+
+.home-button {
+    background-color: #171717 !important;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
+.mt-4 {
+    margin-top: 40px !important;
+}
+
+.home-image {
+    vertical-align: middle;
+    margin-bottom: 50px;
+}
+
+.home-image .logo {
+    width: 150px;
+    vertical-align: middle;
+}
+
+.home-image .logo-plus {
+    display: inline-block;
+    font-size: 50px;
+    margin: 0 15px 0 30px;
+    vertical-align: middle;
+}
+
+img.footer-image {
+    width: 50px;
+    margin: 30px auto;
+    opacity: .8;
+}
+
+img.logo-image {
+    width: 200px;
+    margin-top: 100px;
+}
+
+code {
+    background: #272822;
+    padding: 4px;
+    font-size: 90%;
+    color: #fd971f;
+}
+
+.code {
+    background: #272822;
+    display: block;
+    word-break: break-all;
+    padding: 20px;
+    text-align: left;
+}
+
+.code .id-token-0 {
+    color: #cc6633;
+}
+
+.code .id-token-1 {
+    color: #f9f8f5;
+}
+
+.code .id-token-2 {
+    color: #fd971f;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    text-align: left;
+}
+
+.row > .column {
+    flex: 40%;
+    margin-right: 15px;
+}
+
+.row > .column:last-child {
+    flex: 60%;
+    margin-right: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+.container {
+    width: 1220px;
+    margin: 0 auto;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none !important;
+    border: 1px solid #bc261a;
+    box-shadow: 0 0 4px #bc261a;
+}
+
+form {
+    text-align: left;
+    margin-top: 25px;
+}
+
+.field {
+    margin: 20px 0;
+}
+
+.field > label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.field > input, .field > textarea, .field > select {
+    display: block;
+    padding: 10px 12px;
+    width: calc(100% - 24px);
+    border: 1px solid #eee;
+}
+
+.field > input:read-only {
+    background-color: #eee;
+}
+
+.json {
+    text-align: left;
+    display: block;
+    overflow: auto;
+    word-break: break-all;
+}
+
+.json .pretty-json-container.object-container {
+    padding: 20px;
+}
+
+.header {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.header > .company-logo-image {
+    height: 40px;
+    margin-right: auto;
+}
+
+.header > ul.nav {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 8px 0;
+    text-transform: uppercase;
+}
+
+.header > ul.nav > li {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.header > ul.nav > li:hover {
+    color: #bc261a;
+}
+
+.dropdown {
+    position: relative;
+    margin: 0 20px !important;
+}
+
+.dropdown.show > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+.dropdown-menu {
+    background: #111;
+    color: #fff;
+    position: absolute;
+    inset: 0px auto auto 0px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    min-width: 100%;
+    transform: translate3d(0px, 34px, 0px);
+    display: none;
+}
+
+.dropdown-menu a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    padding: 10px 0;
+    display: block;
+}
+
+.section-box {
+    border: 1px solid #ececec;
+    margin-bottom: 25px;
+}
+
+.section-box-header {
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+.section-box-content {
+    padding: 20px;
+    text-align: left;
+}
+
+ul.list {
+    padding: 0 20px;
+    list-style: none;
+}
+
+ul.list > li {
+    margin-bottom: 10px;
+}
+
+ul.list > li::before {
+    content: "\2022";
+    color: #bc261a;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+}
+
+.event-date {
+    color: #bc261a;
+    font-size: 14px;
+}
+
+.content {
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.flex-grid {
+    display: flex;
+    column-gap: 40px;
+    flex-direction: row;
+}
+
+.flex-column-auto {
+    flex: 1;
+}
+
+.side-nav-section {
+    background-color: #f8f8f8;
+}
+
+ul.side-nav {
+    list-style: none;
+    text-align: left;
+    margin-top: 35px;
+}
+
+ul.side-nav > li {
+    margin-bottom: 10px !important;
+    cursor: pointer;
+}
+
+ul.side-nav > li:hover,
+ul.side-nav > li.active {
+    color: #bc261a;
+}
+
+footer {
+    background-color: #111111;
+    margin-top: auto;
+}
+
+footer > .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer > .container > .left {
+    margin-right: auto;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+footer .footer-logo-image {
+    margin: 25px;
+    height: 150px;
+    font-size: 13px;
+}
+
+footer ul.footer-links {
+    color: #fff;
+    list-style: none;
+    text-align: left;
+    margin-top: 35px;
+}
+
+footer ul.footer-links > li {
+    margin-bottom: 10px !important;
+    cursor: pointer;
+}
+
+footer ul.footer-links > li:hover {
+    color: #bc261a;
+}
+
+.content .spa-app-description {
+    line-height: 1.7;
+}
+
+.btn.primary, .btn.primary:active, .btn.primary:focus {
+    background-color: #bc261a;
+    border-radius: 3px;
+    border: none;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 1.14285714rem;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+    cursor: pointer;
+    -webkit-text-size-adjust: none;
+    padding: .78571429em 1.5em .78571429em;
+    margin-top: 30px;
+    outline: none;
+}
+
+.sub-title {
+    margin-top: 0;
+}
+
+.inline-code-block {
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    padding: 3px 5px;
+    border: 1px solid #cdcdcd;
+    background-color: white;
+    font-family: Monaco, Consolas, "Andale  Mono", "DejaVu Sans Mono", monospace;
+}
+
+.inline-code-block a {
+    text-decoration: none !important;
+}
